@@ -1,0 +1,15 @@
+        INP
+loop    STA count
+        LDA term
+        OUT
+        ADD term
+        STA term
+        LDA count
+        SUB one
+        STA count
+        BRP loop
+        HLT
+        
+one     DAT 1
+count   DAT 0
+term    DAT 1
