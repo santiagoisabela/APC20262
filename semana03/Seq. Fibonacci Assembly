@@ -1,0 +1,37 @@
+       INP
+        STA N
+
+        LDA ZERO
+        STA A
+
+        LDA UM
+        STA B
+
+LOOP    LDA A
+        OUT
+
+        LDA A
+        ADD B
+        STA TEMP
+
+        LDA B
+        STA A
+
+        LDA TEMP
+        STA B
+
+        LDA N
+        SUB UM
+        STA N
+
+        BRZ FIM
+        BRA LOOP
+
+FIM     HLT
+
+A       DAT 0
+B       DAT 1
+TEMP    DAT 0
+N       DAT 0
+ZERO    DAT 0
+UM      DAT 1
