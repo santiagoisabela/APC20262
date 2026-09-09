@@ -12,6 +12,10 @@ Arquivo contendo o programa desenvolvido em Assembly durante a atividade da sema
 
 assembly.txt
 
+assembly.txt — programa desenvolvido em Assembly
+fluxograma.jpg— fluxograma da solução
+octostudio — atividade desenvolvida no OctoStudio
+
 2. Fluxograma
 
 Representação em fluxograma da ideia/solução desenvolvida durante a atividade.
