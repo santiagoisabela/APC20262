@@ -1,28 +1,14 @@
-Semana 01
+Semana 02
 
-Atividades
+Atividade
 
-Nesta semana foram desenvolvidas atividades introdutórias relacionadas à construção de algoritmos e à representação de soluções computacionais.
+Continuação dos estudos de Assembly, com a implementação de um programa para trabalhar com uma progressão geométrica.
 
-Entregas
+Entrega
 
-1. Programa em Assembly
+Programa em Assembly: Progressão Geométrica.
 
-Arquivo contendo o programa desenvolvido em Assembly durante a atividade da semana.
-
-assembly.txt
-
-assembly.txt — programa desenvolvido em Assembly
-
-fluxograma.jpg— fluxograma da solução
-
-octostudio — atividade desenvolvida no OctoStudio
-
-2. Fluxograma
-
-Representação em fluxograma da ideia/solução desenvolvida durante a atividade.
-
-fluxograma.jpg
+Fluxograma explicativo do programa em Assembly.
 
 Reflexão
 
