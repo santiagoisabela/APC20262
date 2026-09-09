@@ -1,11 +1,27 @@
+*Avaliação
+
 var grass = createSprite(200,200);
 grass.setAnimation("floating_grass");
+
 var alien = createSprite(180,100);
 alien.setAnimation("alien");
 alien.scale = 1.3;
+
 var robot = createSprite(300,300);
 robot.setAnimation("robot");
 robot.scale = 0.2;
+
 drawSprites();
+
 textSize(20);
-text("This is a beautiful scene", 10, 255);
+text("Essa é uma linda cena", 10, 255);
+
+// O código cria uma cena utilizando sprites de grama, um alienígena e um robô. Também são definidas as posições e escalas dos sprites e adicionada uma frase à cena.
+
+*Desafio
+
+textSize(50);
+fill("black");
+text("Four score and seven years ago...", 0, 30, 400, 400);
+
+// O código altera o tamanho do texto, define sua cor como preta e exibe a frase na tela, utilizando as dimensões e a posição especificadas.
