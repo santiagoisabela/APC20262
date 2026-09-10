@@ -1,0 +1,27 @@
+# Avaliação
+
+```javascript
+World.frameRate = 10;
+var salt = createSprite(200,200);
+salt.setAnimation("salt");
+salt.rotation = 180;
+
+function draw() {
+  salt.y = randomNumber(200, 210);
+  background("skyblue");
+  drawSprites();
+}
+// O programa cria um sprite de sal e define sua rotação. A posição vertical do sal é alterada aleatoriamente entre 200 e 210 a cada execução do draw, criando um pequeno movimento. A taxa de atualização foi definida em 10 frames por segundo.
+
+# Desafio
+
+World.frameRate = 10;
+var menina = createSprite(200,200);
+menina.setAnimation("menina");
+
+function draw() {
+  background("pink");
+  menina.rotation = randomNumber(1, 10);
+  drawSprites();
+}
+// O programa cria um sprite de uma menina e altera sua rotação para um valor aleatório entre 1 e 10 graus a cada execução do draw, criando um movimento contínuo de rotação.
