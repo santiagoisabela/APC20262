@@ -1,0 +1,55 @@
+# Avaliação
+
+var orangeFish = createSprite(400, randomNumber(0, 100));
+orangeFish.setAnimation("orange_fish");
+
+var blueFish = createSprite(250, randomNumber(0, 200));
+blueFish.setAnimation("blue_fish");
+
+var greenFish = createSprite(300, randomNumber(200, 300));
+greenFish.setAnimation("green_fish");
+
+function draw() {
+  // Draw Background
+  background("navy");
+  
+  // Update Values
+  orangeFish.x = orangeFish.x - 5;
+  greenFish.x = greenFish.x - 10;
+  blueFish.x = blueFish.x - 15;
+  
+  // Draw Animations
+  drawSprites();
+}
+
+// O código cria três peixes em diferentes posições e faz com que eles se movimentem horizontalmente em velocidades diferentes. O fundo é atualizado a cada execução do draw e os sprites são desenhados na tela.
+
+# Desafio
+
+var orangeFish = createSprite(400, randomNumber(0, 100));
+orangeFish.setAnimation("orange_fish");
+
+var blueFish = createSprite(250, randomNumber(0, 200));
+blueFish.setAnimation("blue_fish");
+
+var greenFish = createSprite(300, randomNumber(200, 300));
+greenFish.setAnimation("green_fish");
+
+function draw() {
+  // Draw Background
+  background("navy");
+  
+  // Update Values
+  orangeFish.x = orangeFish.x - 5;
+  greenFish.x = greenFish.x - 10;
+  blueFish.x = blueFish.x - 15;
+  
+  // Draw Animations
+  drawSprites();
+  
+  orangeFish.rotation = randomNumber(1,10);
+  greenFish.rotation = randomNumber(2,6);
+  blueFish.rotation = randomNumber(1,14);
+}
+
+// O código mantém o movimento horizontal dos três peixes e adiciona uma rotação aleatória para cada um. Cada peixe possui uma faixa diferente de valores de rotação, fazendo com que eles apresentem movimentos diferentes.
