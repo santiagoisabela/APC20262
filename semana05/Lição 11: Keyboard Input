@@ -1,0 +1,70 @@
+# Avaliação
+
+var backdrop = createSprite(200,200);
+backdrop.setAnimation("rainbow");
+
+var flyer = createSprite(200,200);
+flyer.setAnimation("wing_bot");
+
+function draw() {
+  //move left when the left arrow is pressed
+  if (keyDown("left")) {
+    flyer.x = flyer.x - 5;
+  }
+  
+  //move right when the right arrow is pressed
+  if (keyDown("right")) {
+    flyer.x = flyer.x + 5;
+  }
+  
+  //move up when the up arrow is pressed
+  if (keyDown("up")) {
+    flyer.y = flyer.y - 5;
+  }
+  
+  //move down when the down arrow is pressed
+  if (keyDown("down")) {
+    flyer.y = flyer.y + 5;
+  }
+  
+  drawSprites();
+}
+
+// O código cria um personagem que pode ser movimentado pelas quatro setas do teclado. Cada tecla altera a posição horizontal ou vertical do personagem.
+
+# Desafio
+
+var bug = createSprite(200, 200);
+bug.setAnimation("fly");
+
+function draw() {
+  //Draw Background
+  background("white");
+  
+  // Update Values
+  if(keyDown("up")){
+    bug.y = bug.y - 15;
+    bug.setAnimation("fly_up");
+
+  }
+  if(keyDown("down")){
+    bug.y = bug.y + 15;
+    bug.setAnimation("fly_down");
+
+  }
+  if(keyDown("left")){
+    bug.x = bug.x - 15;
+    bug.setAnimation("fly");
+
+  }
+  if(keyDown("right")){
+    bug.x = bug.x + 15;
+    bug.setAnimation("fly_right");
+
+  }
+
+  //Draw Animations
+  drawSprites();
+}
+
+// O código permite movimentar o personagem em diferentes direções utilizando as setas do teclado. Além de alterar sua posição, a animação do personagem muda de acordo com a direção do movimento.
