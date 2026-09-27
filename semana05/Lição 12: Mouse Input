@@ -1,0 +1,38 @@
+# Avaliação
+
+var backdrop = createSprite(200,200);
+backdrop.setAnimation("sky");
+
+var creature = createSprite(200,250);
+creature.setAnimation("creature");
+creature.scale = 0.2;
+
+function draw() {
+  if (mouseDown("leftButton")) {
+    creature.rotation = randomNumber(-5,5);
+    drawSprites();
+  } else {
+    fill("black");
+    textSize(40);
+    text("Press the mouse to shake the creature.", 20, 50, 360, 100);
+  }
+}
+
+// O código cria um cenário e uma criatura que reage ao clique do mouse. Enquanto o botão esquerdo é pressionado, sua rotação recebe valores aleatórios entre -5 e 5, criando um efeito de movimento. Caso o botão não esteja pressionado, uma instrução é exibida na tela.
+
+# Desafio
+
+var bee = createSprite(200, 200);
+bee.setAnimation("bee");
+
+function draw(){
+  if (World.mouseX) {
+    bee.x = World.mouseX;
+    bee.y = World.mouseY;
+  }
+  
+  background("lightblue");
+  drawSprites();
+}
+
+// O código cria uma abelha que acompanha a posição do mouse na tela. As coordenadas do sprite são atualizadas de acordo com World.mouseX e World.mouseY, permitindo controlar seu movimento com o cursor.
