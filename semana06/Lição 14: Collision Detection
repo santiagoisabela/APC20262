@@ -1,0 +1,63 @@
+# Avaliação
+
+var horse = createSprite(200, 150);
+horse.setAnimation("horse");
+
+var rainbow = createSprite(400, 370);
+rainbow.setAnimation("rainbow");
+rainbow.velocityX = -5;
+rainbow.velocityY = -5;
+rainbow.rotateToDirection = true;
+
+function draw() {
+  background("skyblue");
+  
+  if (rainbow.isTouching(horse)) {
+    horse.setAnimation("unicorn");
+  }
+  
+  drawSprites();
+}
+
+// O código cria um cavalo e um arco-íris que se movimenta diagonalmente pela tela. A função isTouching() verifica a colisão entre os dois sprites e, quando o arco-íris toca o cavalo, sua animação é alterada, transformando-o em um unicórnio.
+
+# Desafio
+
+var points = 0;
+
+var coin = createSprite(200, 100);
+coin.setAnimation("coin");
+
+var ghost = createSprite(200, 300);
+ghost.setAnimation("ghost");
+
+function draw() {
+  if (ghost.isTouching(coin)) {
+    points = points + 1;
+    coin.x = randomNumber(0, 380);
+    coin.y = randomNumber(0,230);
+  }
+  
+  background("lightblue");
+  text("Points: " + points, 25, 25);
+  
+  if(keyDown("up")) {
+    ghost.y = ghost.y - 5;
+  }
+  
+  if(keyDown("down")) {
+    ghost.y = ghost.y + 5;
+  }
+  
+  if(keyDown("left")) {
+    ghost.x = ghost.x - 5;
+  }
+  
+  if(keyDown("right")) {
+    ghost.x = ghost.x + 5;
+  }
+  
+  drawSprites();
+}
+
+// O código cria um pequeno jogo em que o fantasma é controlado pelas setas do teclado. Quando ele toca a moeda, a pontuação aumenta em um ponto e a moeda é reposicionada aleatoriamente na tela, permitindo que o jogador continue acumulando pontos.
