@@ -1,0 +1,41 @@
+# Avaliação
+
+var rock = createSprite(200, 350);
+rock.setAnimation("rock");
+rock.velocityY = -20;
+rock.rotationSpeed = 2;
+
+function draw() {
+  background("skyblue");
+  rock.velocityY = rock.velocityY + 0.9;
+  
+  // update sprites
+  
+  drawSprites();
+}
+
+// O código cria uma pedra que é lançada para cima com velocidade inicial negativa. A cada execução do draw, sua velocidade vertical aumenta em 0.9, fazendo com que a pedra desacelere na subida e depois comece a cair, simulando o efeito da gravidade. 
+
+# Desafio
+
+var plane = createSprite(50, 350);
+plane.setAnimation("plane");
+
+var rock = createSprite(150, 350);
+rock.setAnimation("rock");
+
+var rockdown = createSprite(350, 100);
+rockdown.setAnimation("rock_down");
+
+plane.velocityY = -12;
+plane.velocityX = 3;
+
+function draw() {
+  background("lightblue");
+  
+  plane.velocityY = plane.velocityY + 0.3;
+  
+  drawSprites();
+}
+
+// O desafio consiste em fazer o avião percorrer a tela desviando das pedras. O avião possui velocidades horizontal e vertical e, durante o movimento, sua velocidade vertical é alterada continuamente, criando uma trajetória curva. O objetivo é ajustar esse movimento para que o avião passe pelos obstáculos sem atingir as pedras.
