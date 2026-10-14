@@ -1,0 +1,7 @@
+# Semana 06
+
+Nesta semana, finalizei as atividades do **Code.org Game Lab**, realizando as lições **13 a 18**.
+Ao longo das atividades, trabalhei principalmente com movimentação de sprites, colisões, pontuação, funções e estruturas condicionais, além de combinar esses conceitos na criação de jogos mais completos. 
+Achei interessante perceber como os conteúdos das lições anteriores começaram a se conectar, principalmente nos desafios que envolviam diferentes interações ao mesmo tempo.
+Minha maior dificuldade foi organizar a lógica dos movimentos e das colisões para que os sprites se comportassem da forma esperada.
+Como atividade final, desenvolvi um videogame em que a personagem coleta energia enquanto desvia de obstáculos, reunindo vários dos conceitos aprendidos durante as últimas semanas.
