@@ -1,0 +1,114 @@
+# Avaliação
+
+var coin = createSprite(200,10);
+coin.setAnimation("coin_gold_1");
+setCoin();
+
+var bunny = createSprite(200,350);
+bunny.setAnimation("bunny1_ready_1");
+
+var score = 0;
+
+function draw() {
+
+  if (score < 10) {
+    background("white");
+  } else {
+    background("green");
+  }
+  
+  if (keyDown("left")) {
+    bunny.x = bunny.x - 8;
+  }
+  
+  if (keyDown("right")) {
+    bunny.x = bunny.x + 8;
+  }
+  
+  if (coin.y > 400) {
+    setCoin();
+  }
+  
+  if (bunny.isTouching(coin)) {
+    score = score + 1;
+    setCoin();
+  }
+  
+  textSize(20);
+  text("Score: " + score, 10, 10, 100, 100);
+  
+  drawSprites();
+}
+
+function setCoin() {
+  coin.x = randomNumber(20, 380);
+  coin.y = 0;
+  coin.velocityY = randomNumber(6, 10);
+}
+
+// O código cria um jogo em que o coelho é movimentado horizontalmente pelas setas do teclado para coletar moedas que caem pela tela. Quando uma moeda é coletada, a pontuação aumenta e a função setCoin() reposiciona a moeda com uma nova posição e velocidade aleatórias. Ao atingir 10 pontos, a cor do fundo também é alterada.
+
+# Desafio
+
+var sunSize = 20;
+var moonX = 0;
+
+function draw() {
+  if (World.mouseY > 200) {
+    drawScene1();
+  } else {
+    drawScene2();
+  }
+}
+
+function drawScene1() {
+  background("skyblue");
+
+  fill("green");
+  rect(0, 300, 400, 100);
+
+  fill("yellow");
+  ellipse(320, 80, sunSize, sunSize);
+
+  sunSize = sunSize + 1;
+
+  if (sunSize > 120) {
+    sunSize = 20;
+  }
+
+  fill("pink");
+  rect(140, 220, 120, 90);
+
+  fill("brown");
+  triangle(130, 220, 200, 150, 270, 220);
+}
+
+function drawScene2() {
+  background("navy");
+
+  fill("darkgreen");
+  rect(0, 300, 400, 100);
+
+  fill("white");
+  ellipse(50, 60, 6, 6);
+  ellipse(120, 100, 6, 6);
+  ellipse(200, 50, 6, 6);
+  ellipse(280, 120, 6, 6);
+
+  fill("lightyellow");
+  ellipse(moonX, 80, 60, 60);
+
+  moonX = moonX + 2;
+
+  if (moonX > 430) {
+    moonX = -30;
+  }
+
+  fill("purple");
+  rect(140, 220, 120, 90);
+
+  fill("black");
+  triangle(130, 220, 200, 150, 270, 220);
+}
+
+// O código cria duas cenas diferentes controladas pela posição vertical do mouse. Na primeira, é exibido um cenário diurno em que o Sol aumenta de tamanho e reinicia ao atingir um limite. Na segunda, é criado um cenário noturno em que a Lua se movimenta horizontalmente pela tela e retorna ao início após ultrapassar a borda. O desafio também utiliza funções para organizar separadamente a construção de cada cena.
