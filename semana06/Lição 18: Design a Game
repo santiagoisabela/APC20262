@@ -1,0 +1,107 @@
+# Lição 18 — Projeto Final: Videogame
+
+## Código
+
+// Create your variables here
+var score = 0;
+var lives = 3;
+
+
+// Create your sprites here
+var isa = createSprite(200, 330);
+isa.setAnimation("isa");
+isa.scale = 0.3;
+
+var lightning = createSprite(100, -20);
+lightning.setAnimation("lightning");
+lightning.velocityY = 5;
+lightning.scale = 0.3;
+
+var wall = createSprite(300, -150);
+wall.setAnimation("wall");
+wall.velocityY = 5;
+wall.scale = 0.3;
+
+
+function draw() {
+  // draw background
+  background("gray");
+
+  fill("darkgray");
+  rect(50, 0, 300, 400);
+
+  stroke("white");
+  strokeWeight(3);
+  line(150, 0, 150, 400);
+  line(250, 0, 250, 400);
+
+
+  // update sprites
+
+  if (keyDown("left")) {
+    isa.x = isa.x - 5;
+  }
+
+  if (keyDown("right")) {
+    isa.x = isa.x + 5;
+  }
+
+
+  if (isa.x < 70) {
+    isa.x = 70;
+  }
+
+  if (isa.x > 330) {
+    isa.x = 330;
+  }
+
+
+  if (isa.isTouching(lightning)) {
+    score = score + 1;
+    resetLightning();
+  }
+
+
+  if (lightning.y > 420) {
+    resetLightning();
+  }
+
+
+  if (isa.isTouching(wall)) {
+    lives = lives - 1;
+    resetWall();
+  }
+
+
+  if (wall.y > 420) {
+    resetWall();
+  }
+
+
+  drawSprites();
+
+
+  fill("white");
+  noStroke();
+  textSize(18);
+  text("Energy: " + score, 10, 25);
+  text("Lives: " + lives, 310, 25);
+}
+
+
+// Create your functions here
+
+function resetLightning() {
+  lightning.x = randomNumber(80, 320);
+  lightning.y = -20;
+  lightning.velocityY = randomNumber(4, 7);
+}
+
+
+function resetWall() {
+  wall.x = randomNumber(80, 320);
+  wall.y = randomNumber(-200, -50);
+  wall.velocityY = randomNumber(4, 7);
+}
+
+// Para a atividade final, desenvolvi um videogame em que a personagem Isa se movimenta horizontalmente por uma pista utilizando as setas do teclado. O objetivo é coletar os raios para ganhar energia, enquanto desvia das paredes, que retiram uma vida quando atingem a personagem. Os obstáculos e itens reaparecem em posições e velocidades aleatórias, utilizando funções próprias para reiniciá-los. Nesse projeto, reuni diferentes conceitos trabalhados ao longo das lições, como sprites, variáveis, condicionais, colisões, movimento, randomização e criação de funções.
